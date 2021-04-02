@@ -25,10 +25,11 @@ public class Main {
 	public static int parseToint(String arg) {
 
 		int num = 0;
+		int numLen = 1;
 		try {
 			num = Integer.parseInt(arg);
 		} catch (NumberFormatException ex) {
-			throw new NumberFormatException("数値に変換できません");
+			ex.printStackTrace();
 		}
 		return num;
 	}
