@@ -5,39 +5,31 @@ import java.util.List;
 
 public class CheckStupidNum {
 
+	// 普通の数字のリスト
+	public  static List<Integer> normalNumList = new ArrayList<>();
+	// アホな数字のリスト
+	public static List<Integer> stupidNumList = new ArrayList<>();
+
 	/**
 	 * 3の倍数または、3のつく数字の時アホになる
 	 * @param num 列挙する数字の上限
 	 */
 	public static void checkStupidNum(int num){
 
-		NumSetterGetter nsg = new NumSetterGetter();
-
-		// 普通の数字のリスト
-		List<Integer> normalNumList = new ArrayList<>();
-		// アホな数字の
-		List<Integer> stupidNumList = new ArrayList<>();
+		//NumSetterGetter nsg = new NumSetterGetter();
 
 		for (int i = 1; i <= num; i++) {
 
 			// 3の倍数または、3のつく数字の時アホになる
 			if (i % 3 == 0 || Integer.toString(i).contains("3")) {
 				stupidNumList.add(i);
-				nsg.setStupidNumList(stupidNumList);
+				//nsg.setStupidNumList(stupidNumList);
 				System.out.println(i + "っっ！！");
 			} else {
 				normalNumList.add(i);
-				nsg.setNormalNumList(normalNumList);
+				//nsg.setNormalNumList(normalNumList);
 				System.out.println(i);
 			}
-		}
-
-		for (int sl : stupidNumList) {
-			System.out.println(sl);
-		}
-		System.out.println("////////////");
-		for (int sl2 : nsg.getStupidNumList()) {
-			System.out.println(sl2);
 		}
 	}
 }
