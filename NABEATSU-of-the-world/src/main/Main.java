@@ -10,7 +10,7 @@ public class Main {
 			throw new ArrayIndexOutOfBoundsException("引数として数字を入力してください");
 		}
 		// 引数を数値に変換
-		int num = parseToint(args[0]);
+		int num = parseToInt(args[0]);
 
 		// 数字を判定する
 		CheckStupidNum csn = new CheckStupidNum();
@@ -22,10 +22,9 @@ public class Main {
 	 * @param arg コマンドライン引数
 	 * @return 数値に変換された値
 	 */
-	public static int parseToint(String arg) {
+	public static int parseToInt(String arg) {
 
 		int num = 0;
-		int numLen = 1;
 		try {
 			num = Integer.parseInt(arg);
 		} catch (NumberFormatException ex) {

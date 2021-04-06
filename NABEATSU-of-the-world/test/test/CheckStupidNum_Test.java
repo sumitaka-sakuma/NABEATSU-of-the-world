@@ -19,6 +19,7 @@ public class CheckStupidNum_Test {
 		CheckStupidNum sut = new CheckStupidNum();
 		sut.checkStupidNum(40);
 		assertEquals(sut.normalNumList, expNormal.getExpectedNormalNumList());
+		assertEquals(sut.stupidNumList, expStupid.getExpectedStupidNumList());
 	}
 
 }
