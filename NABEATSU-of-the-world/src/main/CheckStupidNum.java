@@ -16,18 +16,14 @@ public class CheckStupidNum {
 	 */
 	public static void checkStupidNum(int num){
 
-		//NumSetterGetter nsg = new NumSetterGetter();
-
 		for (int i = 1; i <= num; i++) {
 
 			// 3の倍数または、3のつく数字の時アホになる
 			if (i % 3 == 0 || Integer.toString(i).contains("3")) {
 				stupidNumList.add(i);
-				//nsg.setStupidNumList(stupidNumList);
 				System.out.println(i + "っっ！！");
 			} else {
 				normalNumList.add(i);
-				//nsg.setNormalNumList(normalNumList);
 				System.out.println(i);
 			}
 		}

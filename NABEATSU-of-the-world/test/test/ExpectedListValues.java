@@ -5,6 +5,10 @@ import java.util.List;
 
 public class ExpectedListValues {
 
+	/**
+	 * 期待値としての普通の数字のリスト
+	 * @return
+	 */
 	public List<Integer> getExpectedNormalNumList() {
 
 		List<Integer> expectedNomalNumList = new ArrayList<>();
@@ -33,6 +37,10 @@ public class ExpectedListValues {
 		return expectedNomalNumList;
 	}
 
+	/**
+	 * 期待値としてのアホな数字のリスト
+	 * @return
+	 */
 	public List<Integer> getExpectedStupidNumList() {
 
 		List<Integer> expectedStupidNumList = new ArrayList<>();
